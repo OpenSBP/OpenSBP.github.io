@@ -1,0 +1,212 @@
+' File created by ShopBot Copy Machine Virtual Tool
+' Copyright 2003-2008 Bill Young and ShopBot Tools
+' 
+' ********** WARNING!!! ********** WARNING!!! *********** WARNING!!! **********
+' 
+' User takes responsibility for the effects and outcomes of the use of this program.
+' Test Run this program in Preview Mode and with air cutting above material to make
+' sure you are satisfied that it is doing what you expect it to do.
+' 
+' 
+IF %(51) = 1 THEN GOTO CONTINUE1
+     ' Either the stylus is already contacting the edge or there's a wiring or probe problem ----> EXITING !
+     PAUSE 
+END
+CONTINUE1:
+
+     SA,
+     SL,
+     &surfacetol = 0.025
+     &zmax = 0
+     &plunge = &zmax 
+     &outname = "C:\SbParts\my_scanned.sbp"
+     &xmove = 0.01
+     &xdist = 6
+     &ymove = 0.01
+     &ydist = 6
+     &safeclear = 2
+     &clearanceproblems = 0
+     &onbottom = 1
+     &madecontact = 0
+     IF %(3) > &safeclear THEN GOSUB ZERROR
+     MS,1,0.6
+     MZ, &safeclear
+
+     OPEN &outname FOR OUTPUT AS #1
+     GOSUB SBPHEADER
+     INPUT "Do you want to open the Keypad to move to a new starting position? If so type (Y). When you're at the correct start point, hitting the ESCAPE key will close the Keypad and start the probing process." &showpad
+      IF &showpad = Y then GOSUB SHOWKEYPAD 
+'    Are you in position and ready to start? If so then click OK to start scanning. If you're not then click CANCEL.
+     PAUSE
+     IF %(3) > &safeclear THEN GOSUB ZERROR
+
+     &xstart = %(1)
+     &ystart = %(2)
+     WRITE #1, "JZ", &safeclear
+     WRITE #1, "J2", &xstart, &ystart
+
+     &xmax = &xstart + &xdist
+     &ymax = &ystart + &ydist
+     &zstart = &safeclear
+     &xmin = &xstart
+     &ymin = &ystart
+     &xdir = 1
+     &ydir = 1
+     &xloc = &xstart
+     &yloc = &ystart
+
+DOWN_CYCLE:
+     IF %(51) = 0 THEN GOTO CLEAR_FOR_DOWN
+     ON INPUT (1,0) GOTO CONTACT
+     MZ, &plunge 
+     ON INPUT (1,0)
+     'hit the bottom..check for first contact after coming off edge
+     IF &madecontact = 1 THEN GOSUB WRITE_BOTTOM
+
+OVER_CYCLE:
+     IF %(51) = 0 THEN GOTO CLEAR_FOR_DOWN
+     ON INPUT (1,0) GOTO LAT_CONTACT
+     MX, &xloc
+     ON INPUT (1,0)
+     &xloc = &xloc + (&xmove * &xdir)
+     If &xdir = -1 THEN GOTO DOWN_CK
+UP_CK:
+     IF &xloc > &xmax THEN GOTO NEXTY
+     GOTO DOWN_CYCLE
+DOWN_CK:
+     IF &xloc < &xmin THEN GOTO NEXTY
+     GOTO DOWN_CYCLE
+
+CONTACT:
+     WRITE #1, " M3", %(1), %(2), %(3)
+     &madecontact = 1
+     MZ, %(3) + &surfacetol
+     ON INPUT(1,1) GOTO OVER_CYCLE 
+     MZ, &safeclear 
+     ON INPUT(1,1)
+     GOSUB AT_TOP
+     GOTO OVER_CYCLE
+
+LAT_CONTACT:
+     ' hit sideways...check for first contact after no contact at bottom
+     IF &onbottom = 1 THEN GOSUB FIRST_SIDE
+     MZ, %(3) + &surfacetol
+     ON INPUT(1,1) GOTO DOWN_CYCLE
+     MZ, &safeclear
+     ON INPUT(1,1)
+     GOSUB AT_TOP
+     GOTO DOWN_CYCLE
+
+CLEAR_FOR_DOWN:
+     MZ, %(3) + &surfacetol
+     &zloc = %(3)
+     IF &zloc > &safeclear THEN GOSUB AT_TOP
+     GOTO DOWN_CYCLE
+
+NEXTY:
+     IF %(51) = 0 THEN GOTO CLEAR_FOR_DOWN
+     ON INPUT (1,0)GOTO ENDROW
+     MZ, &plunge
+
+ENDROW_RET:
+     ON INPUT (1,0)
+     MZ, &safeclear
+     &yloc = &yloc + (&ymove * &ydir)
+     IF &yloc > &ymax  THEN GOTO LAST
+     MY, &yloc
+     &xdir = &xdir * -1
+     &xloc = &xloc + (&xmove * &xdir)
+     GOTO DOWN_CYCLE
+
+WRITE_BOTTOM:
+     WRITE #1, " M3", %(1), %(2), %(3)
+     &madecontact = 0
+     &onbottom = 1
+RETURN
+
+FIRST_SIDE:
+     WRITE #1, " M3", %(1), %(2), %(3)
+     &madecontact = 1
+     &onbottom = 0
+RETURN
+    
+SBPHEADER:
+     WRITE #1; "' File created by ShopBot Copy Machine"
+     WRITE #1; "' Copyright 2003-2008 Bill Young and ShopBot Tools"
+     WRITE #1; "' "
+     WRITE #1; "' Surface was probed with a stylus that was 0.125"
+     WRITE #1; "' "
+     WRITE #1; "' "
+     WRITE #1; "' ********** WARNING!!! ********** WARNING!!! *********** WARNING!!! **********"
+     WRITE #1; "' "
+     WRITE #1; "' User takes responsibility for the effects and outcomes of the use of this program."
+     WRITE #1; "' Test Run this program in Preview Mode and with air cutting above material to make"
+     WRITE #1; "'  sure you are satisfied that it is doing what you expect it to do."
+     WRITE #1; "' "
+     WRITE #1, "SA"
+RETURN
+
+LAST:
+     JZ, &safeclear
+     J2, &xstart, &ystart
+     WRITE #1, "JZ", &safeclear
+     WRITE #1,"J2", &xstart, &ystart
+     CLOSE #1
+END
+
+ENDROW:
+     WRITE #1, " M3", %(1), %(2), %(3)
+     GOTO ENDROW_RET
+
+ZERROR:
+     ' Your safe z position is LOWER than your current Z-axis position!!! Click OK to continue with this setting or CANCEL to run the Copy machine again to correct it.
+     PAUSE
+RETURN
+
+SHOWKEYPAD:
+     SK
+     INPUT "Do you want to re-zero your ShopBot here? If so type (2) to zero the X and Y axis, (3) to zero all three axis, or (Z) to zero just the Z-axis." &zero
+      IF &zero = 2 then Z2 
+      IF &zero = 3 then Z3 
+      IF &zero = Z then ZZ 
+RETURN
+
+AT_TOP:
+     &clearanceproblems = &clearanceproblems + 1
+     &trys = 0
+     &break_X = %(1)
+     &break_Y = %(2)
+TRY_TO_CLEAR:
+     IF %(51) = 1 THEN GOTO CLEARED
+     IF &trys > 3 THEN GOTO COULD_NOT_CLEAR
+     MX, &break_X + .1
+     MX, &break_X - .1
+     MX, &break_X + .1
+     MX, &break_X - .1
+     MX, &break_X + .1
+     MX, &break_X - .1
+     MX, &break_X + .1
+     MX, &break_X - .1
+     MX, &break_X + .1
+     MX, &break_X - .1
+     MX, &break_X
+     MY, &break_Y + .1
+     MY, &break_Y - .1
+     MY, &break_Y + .1
+     MY, &break_Y - .1
+     MY, &break_Y + .1
+     MY, &break_Y - .1
+     MY, &break_Y + .1
+     MY, &break_Y - .1
+     MY, &break_Y + .1
+     MY, &break_Y - .1
+     MY, &break_Y
+     &trys = &trys + 1
+     GOTO TRY_TO_CLEAR
+CLEARED:
+RETURN
+
+COULD_NOT_CLEAR:
+     'Sorry, I Could not Clear a Stuck Probe...Exiting
+     PAUSE
+END

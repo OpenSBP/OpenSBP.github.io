@@ -2,173 +2,322 @@
 <html class="no-js" lang="en">
   <head>
     <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Foundation | Welcome</title>
-    <link rel="stylesheet" href="css/foundation.css" />
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <title>OpenSBP&reg;</title>
+    <link rel="stylesheet" href="css/global.css" />
     <script src="js/vendor/modernizr.js"></script>
+    <script src="js/vendor/wufoo.js"></script>
   </head>
-  <body>
+  <body id="top">
     
-    <div class="row">
-      <div class="large-12 columns">
-        <h1>Welcome to Foundation</h1>
-      </div>
-    </div>
-    
-    <div class="row">
-      <div class="large-12 columns">
-        <div class="panel">
-          <h3>We&rsquo;re stoked you want to try Foundation! </h3>
-          <p>To get going, this file (index.html) includes some basic styles you can modify, play around with, or totally destroy to get going.</p>
-          <p>Once you've exhausted the fun in this document, you should check out:</p>
-          <div class="row">
-            <div class="large-4 medium-4 columns">
-              <p><a href="http://foundation.zurb.com/docs">Foundation Documentation</a><br />Everything you need to know about using the framework.</p>
-            </div>
-            <div class="large-4 medium-4 columns">
-              <p><a href="http://zurb.com/university/code-skills">Foundation Code Skills</a><br />These online courses offer you a chance to better understand how Foundation works and how you can master it to create awesome projects.</p>
-            </div>
-            <div class="large-4 medium-4 columns">
-              <p><a href="http://foundation.zurb.com/forum">Foundation Forum</a><br />Join the Foundation community to ask a question or show off your knowlege.</p>
-            </div>
-          </div>
-          <div class="row">
-            <div class="large-4 medium-4 medium-push-2 columns">
-              <p><a href="http://github.com/zurb/foundation">Foundation on Github</a><br />Latest code, issue reports, feature requests and more.</p>
-            </div>
-            <div class="large-4 medium-4 medium-pull-2 columns">
-              <p><a href="https://twitter.com/ZURBfoundation">@zurbfoundation</a><br />Ping us on Twitter if you have questions. When you build something with this we'd love to see it (and send you a totally boss sticker).</p>
-            </div>        
-          </div>
-        </div>
-      </div>
-    </div>
+ <!-- Navigation -->
+    <div class="contain-to-grid sticky">
 
-    <div class="row">
-      <div class="large-8 medium-8 columns">
-        <h5>Here&rsquo;s your basic grid:</h5>
-        <!-- Grid Example -->
+      <nav class="top-bar" data-topbar>
+        <ul class="title-area">
+          <li class="name">
+            <!-- <h1><a class="logo show-for-small-only" href="#"><img src="img/OpenSBP_logo.png" /></a></h1> -->
+            <h1>OpenSBP&reg;</h1>
+          </li>
+          <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+        </ul>
 
-        <div class="row">
-          <div class="large-12 columns">
-            <div class="callout panel">
-              <p><strong>This is a twelve column section in a row.</strong> Each of these includes a div.panel element so you can see where the columns are - it's not required at all for the grid.</p>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="large-6 medium-6 columns">
-            <div class="callout panel">
-              <p>Six columns</p>
-            </div>
-          </div>
-          <div class="large-6 medium-6 columns">
-            <div class="callout panel">
-              <p>Six columns</p>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="large-4 medium-4 small-4 columns">
-            <div class="callout panel">
-              <p>Four columns</p>
-            </div>
-          </div>
-          <div class="large-4 medium-4 small-4 columns">
-            <div class="callout panel">
-              <p>Four columns</p>
-            </div>
-          </div>
-          <div class="large-4 medium-4 small-4 columns">
-            <div class="callout panel">
-              <p>Four columns</p>
-            </div>
-          </div>
-        </div>
-        
-        <hr />
-                
-        <h5>We bet you&rsquo;ll need a form somewhere:</h5>
-        <form>
-          <div class="row">
-            <div class="large-12 columns">
-              <label>Input Label</label>
-              <input type="text" placeholder="large-12.columns" />
-            </div>
-          </div>
-          <div class="row">
-            <div class="large-4 medium-4 columns">
-              <label>Input Label</label>
-              <input type="text" placeholder="large-4.columns" />
-            </div>
-            <div class="large-4 medium-4 columns">
-              <label>Input Label</label>
-              <input type="text" placeholder="large-4.columns" />
-            </div>
-            <div class="large-4 medium-4 columns">
-              <div class="row collapse">
-                <label>Input Label</label>
-                <div class="small-9 columns">
-                  <input type="text" placeholder="small-9.columns" />
-                </div>
-                <div class="small-3 columns">
-                  <span class="postfix">.com</span>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="large-12 columns">
-              <label>Select Box</label>
-              <select>
-                <option value="husker">Husker</option>
-                <option value="starbuck">Starbuck</option>
-                <option value="hotdog">Hot Dog</option>
-                <option value="apollo">Apollo</option>
-              </select>
-            </div>
-          </div>
-          <div class="row">
-            <div class="large-6 medium-6 columns">
-              <label>Choose Your Favorite</label>
-              <input type="radio" name="pokemon" value="Red" id="pokemonRed"><label for="pokemonRed">Radio 1</label>
-              <input type="radio" name="pokemon" value="Blue" id="pokemonBlue"><label for="pokemonBlue">Radio 2</label>
-            </div>
-            <div class="large-6 medium-6 columns">
-              <label>Check these out</label>
-              <input id="checkbox1" type="checkbox"><label for="checkbox1">Checkbox 1</label>
-              <input id="checkbox2" type="checkbox"><label for="checkbox2">Checkbox 2</label>
-            </div>
-          </div>
-          <div class="row">
-            <div class="large-12 columns">
-              <label>Textarea Label</label>
-              <textarea placeholder="small-12.columns"></textarea>
-            </div>
-          </div>
-        </form>
-      </div>     
+        <section class="top-bar-section">
 
-      <div class="large-4 medium-4 columns">
-        <h5>Try one of these buttons:</h5>
-        <p><a href="#" class="small button">Simple Button</a><br/>
-        <a href="#" class="small radius button">Radius Button</a><br/>
-        <a href="#" class="small round button">Round Button</a><br/>            
-        <a href="#" class="medium success button">Success Btn</a><br/>
-        <a href="#" class="medium alert button">Alert Btn</a><br/>
-        <a href="#" class="medium secondary button">Secondary Btn</a></p>           
-        <div class="panel">
-          <h5>So many components, girl!</h5>
-          <p>A whole kitchen sink of goodies comes with Foundation. Check out the docs to see them all, along with details on making them your own.</p>
-          <a href="http://foundation.zurb.com/docs/" class="small button">Go to Foundation Docs</a>          
+          <div class="logo-wrapper hide-for-small-only">
+            <div class="logo">
+              <a href="#top"><img src="img/OpenSBP_logo.png"></a>
+            </div>
+          </div>
+
+          <!-- Right Nav Section -->
+          <ul class="right">
+            <li><a href="#resources">Resources</a></li>
+            <li><a href="#community">Community</a></li>
+            <li><a href="#participants">Participants</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+
+          <!-- Left Nav Section -->
+          <ul class="left">
+            <li><a href="#programming">Programming Extensions</a></li>
+            <li><a href="#license">License</a></li>
+            <li><a href="#language">Language</a></li>
+            <li><a href="#syntax">Syntax</a></li>
+          </ul>
+
+        </section>
+      </nav>
+
+    </div><!-- /navigation -->
+
+
+<header class="row">
+  <div class="medium-10 medium-centered columns">
+    <h1>OpenSBP<sup>&reg;</sup></h1>
+    <h3 class="subheader">An Easy and OPEN CNC Language for Digital Fabrication</h3>
+    <h5>OpenSBP<sup>&reg;</sup> is a syntax standard for the toolpath and instruction code used to control CNC machines and digital fabrication tools. As described here, it is in the public domain and freely available for use on any equipment. It may be generated and exported by any software for use on digital fabrication tools.</h5>
+  </div>
+</header>
+<div class="row" data-equalizer>
+  <div class="medium-6 columns " data-equalizer-watch>
+    <h3>The OpenSBP Group</h3>
+    <p>The <strong>OpenSBP Group</strong> is composed of CNC software companies, CNC tool  manufacturers, and users supporting the development of this open syntax standard for the toolpath and instruction code used to control CNC machines and digital fabrication tools. The group seeks to develop a standard syntax that is easy for human users to read, is readily implemented by different controllers, and offers more flexibility and extensibility than legacy G-code. <strong>OpenSBP</strong><sup>&reg;</sup> is freely available for use in any CNC or digital fabrication system and by any company. The current certification process is described on the Licensing page. All users are invited to participate in the <strong>OpenSBP Group</strong> community.</p>
+
+    <div class="panel secondary"><p>Note that <strong>OpenSBP</strong><sup>&reg;</sup> is not intended to be the high-level, 3D-model-integrated language that many of us envision as the long-term goal for a digital fabrication language. Rather, it is a simple, easy-to-use-and-implement system available to serve current needs and help standardize working with today's digital fabrication tools.</p></div>
+  </div>
+  <div class="medium-6 columns " data-equalizer-watch>
+    <h3>ShopBot Tools</h3>
+    <p>The core coding format for <strong>OpenSBP</strong><sup>&reg;</sup> was developed by ShopBot Tools, Inc for use on ShopBot CNC routers. It has become attractive to other developers because of its simple, straightforward, and human-readable approach to machine control. ShopBots read g-code as well as <strong>OpenSBP</strong> but believe that <strong>OpenSBP</strong> is the most useful and efficient format for anyone not dependent on g-code for legacy reasons.</p>
+
+    <p>ShopBot has contributed the syntax, along with full documentation and support resources, to the public domain and it is available on this site. ShopBot encourage the use of <strong>OpenSBP</strong><sup>&reg;</sup> in any CNC tool or digital fabrication product and will continue to work with the <strong>OpenSBP Group</strong> and community of users on its development. The <strong>OpenSBP Group</strong> plans  to develop an Advisory Board to establish general guidelines for using and expanding the <strong>OpenSBP</strong><sup>&reg;</sup> format and syntax, for managing certification, and for developing supporting documentation including helpful documentation for creating post-processors for <strong>OpenSBP</strong><sup>&reg;</sup>.</p>
+  </div>
+</div>
+
+<div class="row" >
+  <div class="medium-12 columns">
+    <ul class="small-block-grid-2 medium-block-grid-4 concepts" data-equalizer>
+      <li>
+        <div class="panel" data-equalizer-watch>
+          <h5>OpenSBP<sup>&reg;</sup> Syntax</h5>
+          <p>A simple, readable 2-letter command system for communicating toolpaths data.</p>
+          <a href="#syntax" class="button small">Learn more</a>
         </div>
-      </div>
+      </li>
+      <li>
+        <div class="panel" data-equalizer-watch>
+          <h5>OpenSBP<sup>&reg;</sup> Language</h5>
+          <p>A full featured set of parameterized Commands
+      providing a wide range of capabilities and functionality for CNC, digital fabrication, and robotic tools.</p>
+          <a href="#language" class="button small">Learn more</a>
+        </div>
+      </li>
+      <li>
+         <div class="panel" data-equalizer-watch>
+          <h5>OpenSBP<sup>&reg;</sup> Programming Extensions</h5>
+          <p>BASIC-like extensions to the Command language giving programming flexibility.</p>
+          <a href="#programming" class="button small">Learn more</a>
+        </div>
+      </li>
+      <li>
+        <div class="panel" data-equalizer-watch>
+          <h5>OpenSBP<sup>&reg;</sup> License</h5>
+          <p>Open and public use of the <strong>OpenSBP</strong> language established and encouraged here and by the <strong>OpenSBP Group</strong>.</p>
+          <a href="#license" class="button small">Learn more</a>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <hr>
+</div>
+
+
+<!-- left column -->
+<div class="row">
+  <div class="medium-6 columns content-col">
+    <div id="syntax">
+      <h3>Open SBP<sup>&reg;</sup> Syntax</h3>
+      <ul>
+          <li>OpenSBP<sup>&reg;</sup> is a sequential list of text Commands representing instructions to a digital tool.</li>
+          <li>All Commands take the form of a two-letter mnemonics.</li>
+          <li>Commands may be followed by one or more ordered parameters separated by commas:
+            <div>
+              <h3 class="subheader"><code>XX, parameter, parameter, ... </code></h3>
+              <p>Code Example:<br>
+                <code>M3, 23.21, 10, -0.23443    <span>{a 3-axis move to X,Y,Z}</span><br>
+                  MZ,   -.88                 <span>{a Z-axis move}</span><br>
+                  'comment here              <span>{a Remark line}</span>
+                </code>
+              </p>
+            </div>
+          </li>
+          <li>Indents, white space, blank lines may be used freely.</li>
+          <li>M3 (or M5) for 3-axis (or 5-axis) vectors and CG for arcs and circles and circles are the primary workhorse commands for toolpath description.</li>
+          <li>Programming Instructions, using a BASIC-like syntax, are also available in <strong>OpenSBP</strong><sup>&reg;</sup>. See the full details of the Language.</li>
+          <li>Files are text format, saved with the  ".sbp"  extension.</li>
+      </ul>
     </div>
-    
+    <hr>
+    <div id="programming">
+      <h3>Open SBP<sup>&reg;</sup> Programming Extensions</h3>
+      <p>Details of usage for each Command and its Parameters is fully described in the Command Reference document.</p>
+      <a href="files/ProgHand.pdf" class="button small secondary">Download Command Reference</a>
+    </div>
+    <hr>
+    <div id="resources">
+      <h3>Open SBP<sup>&reg;</sup> Resources</h3>
+      <p>OpenSBP® Resources are provided to make working with and developing in OpenSBP® easier. The resources should be helpful in developing and testing post-processors for the language. Those developing post-processors may also find it useful to employ the current ShopBot Control Software with which they can study and test code in Preview Mode. ShopBot Control Software is available for <a href="http://www.shopbottools.com/mSupport/controlsoftware.htm" target="_blank">free download.</p>
+        <ul class="button-group">
+          <li><a href="files/S_sblogo.sbp" class="button small secondary">DOWNLOAD Example File - ShopBot Logo (simple)</a></li>
+          <li><a href="files/vt_probe.sbp" class="button small secondary">DOWNLOAD Example File - Digitizing Probe (programming instructions)</a></li>
+          <li><a href="files/QuickReference_bothpages.pdf" class="button small secondary">DOWNLOAD Language Quick Reference Sheets</a></li>
+          <li><a href="files/GCodetoOpenSBP.zip" class="button small secondary">DOWNLOAD G-Code to OpenSBP Converter</a></li>
+        </ul>
+
+    </div>
+    <hr>
+    <div id="participants">
+      <h3>Open SBP<sup>&reg;</sup> Participant Info</h3>
+      <p>The <strong>OpenSBP Group</strong> is an open community of companies and individuals interested in CNC code. Companies participating in <strong>OpenSBP</strong> offer products that will generate (post) code in the OpenSBP format.</p>
+      <p>To become a particpant, please <a href="#contact">contact us.</a></p>
+      <table>
+        <thead>
+          <tr>
+            <th>Company</th>
+            <th>Products</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><a href="http://www.artcam.com/" target="_blank">ArtCAM/Delcam</a></td>
+            <td>Complete Artistic Design &amp; Manufacturing Solution - ArtCAM Express, ArtCAM Insignia &amp; ArtCAM Pro</td>
+          </tr>
+          <tr>
+            <td><a href="http://www.cabinetpartspro.com/" target="_blank">Cabinet Parts Pro</a></td>
+            <td>Cabinet Parts Pro Cabinet Design Software</td>
+          </tr>
+          <tr>
+            <td><a href="http://www.mastercam.com/en-us/" target="_blank">CNC Software, Inc.</a></td>
+            <td>Mastercam family of CAD/CAM products</td>
+          </tr>
+          <tr>
+            <td><a href="http://mecsoft.com/" target="_blank">MecSoft Corporation</a></td>
+            <td>VisualMILL, RhinoCAM, Alibre CAM, VisualTURN, VisualART, FreeMILL</td>
+          </tr>
+          <tr>
+            <td><a href="http://www.enroutesoftware.com/" target="_blank">SA International</a></td>
+            <td>Enroute, Flexi</td>
+          </tr>
+          <tr>
+            <td><a href="http://www.shopbottools.com/" target="_blank">ShopBot Tools, Inc.</a></td>
+            <td>ShopBot CNC Control Software</td>
+          </tr>
+          <tr>
+            <td><a href="https://www.vectorart3d.com/" target="_blank">VectorArt3D</a></td>
+            <td>3D Models and Collections for CNC, Custom Models</td>
+          </tr>
+          <tr>
+            <td><a href="http://www.vectric.com/" target="_blank">Vectric</a></td>
+            <td>PartWorks, Aspire, V-Carve Pro, Cut-3D, Cut-2D, Photo V-Carve</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+<!-- end of left column -->
+
+<!-- right column -->
+  <div class="medium-6 columns content-col">
+    <div id="language">
+      <h3>Open SBP<sup>&reg;</sup> Language</h3>
+      <p>Programming extensions to the <strong>OpenSBP</strong><sup>&reg;</sup> language are modeled after the syntanx of the BASIC language. A number of programming instructions have been implemented and the plan is to use BASIC-like syntax for further enhancements.</p>
+
+      <p><strong>OpenSBP</strong><sup>&reg;</sup> has also established procedures for interacting with system variables of the operative Control System and for moving data in and out of the Windows Registry.</p>
+
+      <p><strong>OpenSBP</strong><sup>&reg;</sup> Programming Extensions are fulling described in the Programming Handbook.</p>
+      <a href="files/ComRef.pdf" class="button small secondary">Download Programming Handbook</a>
+    </div>
+    <hr>
+    <div id="license">
+      <h3>Open SBP<sup>&reg;</sup> License</h3>
+      <p><strong>OpenSBP</strong><sup>&reg;</sup> is an open syntax standard for the toolpath and instruction code used to control CNC machines and digital fabrication tools. It is intended to be easy for human users to read and should be readily implemented by different controllers. It offers more flexibility and extensibility than legacy G-code. </p>
+
+      <p><strong>OpenSBP</strong><sup>&reg;</sup> is freely available for use in any CNC or digital fabrication system and companies and users are invited to participate in the <strong>OpenSBP</strong><sup>&reg;</sup> community. As interest develops, an open public forum will be established and an Advisory Board selected.</p>
+
+      <p>Currently, any member of the community may self-certify "<strong>OpenSBP</strong>" compliance and use the registered trademark [held, at the moment, by ShopBot]. The <strong>OpenSBP Group</strong> and its Advisory Board will attempt to keep certification a free and self-maintained option. However, the Advisory Board may eventually decide on a need for certification and modest fees to support a certification system.</p>
+
+      <p>The <strong>OpenSBP</strong><sup>&reg;</sup> standard has been developed with guidance of two helpful documents:</p>
+
+        <ul>
+          <li>Bruce Perens on "<a href="http://perens.com/OpenStandards/Definition.html" target="_blank">Open Standards: Principles and Practice</a>"</li>
+          <li>Ken Krechmer on "<a href="http://www.csrstds.com/openstds.html" target="_blank">The Meaning of Open Standards</a>"</li>
+        </ul>
+
+      <p>It is the intention of the <strong>OpenSBP Group</strong> and ShopBot Tools to observe the 6 principles of Perens and the 10 guidelines of Krechmer in developing <strong>OpenSBP</strong><sup>&reg;</sup> for the widest possible use. </p>
+    </div>
+    <hr>
+    <div id="community">
+      <h3>Open SBP<sup>&reg;</sup> Community</h3>
+      <p>The second meeting of the OpenSBP Group was held in conjunction with this year's AWFS Meeting in Las Vegas, CA July 15-18.</p>
+
+      <p>Blog and Forum coming soon&hellip;</p>
+    </div>
+  </div>
+<!-- end of right column -->  
+</div>   
+<footer class="footer">
+  <div class="row">
+    <div class="small-12 medium-5 medium-push-7 columns">
+      <p class="logo show-for-small-only"><img src="img/OpenSBP_logo.png"></p> 
+      <h6>Contact OpenSBP<sup>&reg;</sup></h6>
+      <p>For information, comments, expressions of interest or participation,<br />
+      please contact us. </p>
+      <a id="contact"></a>
+      <form id="form23" name="form23" class="wufoo topLabel page footer-form" accept-charset="UTF-8" autocomplete="off" enctype="multipart/form-data" method="post" novalidate
+      action="https://shopbottools.wufoo.com/forms/m3fpekb164thas/#public">
+        <div class="row">
+          <div class="medium-6 columns">
+            <label>
+              <input id="Field1" name="Field1" type="text" class="field text fn" value="" size="8" tabindex="1" placeholder="First Name"       required />
+            </label>
+          </div>
+          <div class="medium-6 columns">
+            <input id="Field2" name="Field2" type="text" class="field text ln" value="" size="14" tabindex="2" placeholder="Last Name" required />
+            <label>
+            </label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="medium-12 columns">
+            <label>
+              <input id="Field3" name="Field3" type="email" spellcheck="false" class="field text medium" value="" maxlength="255" tabindex="3" placeholder="Email Address"      required />
+            </label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="medium-12 columns">
+            <label>
+              <textarea id="Field4" name="Field4" class="field textarea small" spellcheck="true" rows="5" tabindex="4"
+ onkeyup="" placeholder="Message"    required  ></textarea>
+            </label>
+          </div>
+          <div class="row">
+            <div class="medium-9 medium-push-3 columns">
+              <input id="saveForm" name="saveForm" class="btTxt submit button radius small" type="submit" value="Send" />
+              <div style="display:none"><label for="comment">Do Not Fill This Out</label>
+<textarea name="comment" id="comment" rows="1" cols="1"></textarea>
+<input type="hidden" id="idstamp" name="idstamp" value="RMSukdY1eLHYRPN6QM+dHz52QqTKhCwnGStApv3kTCY=" /></div>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+    <div class="small-12 medium-5 medium-pull-7 columns">
+      <p class="logo hide-for-small-only"><img src="img/OpenSBP_logo.png"></p> 
+      <p class="footer-links">
+        <a href="#syntax">Syntax</a>
+        <a href="#language">Language</a>
+        <a href="#programming">Programming Extensions</a>
+        <a href="#license">License</a>
+        <a href="#resources">Resources</a>
+        <a href="#community">Community</a>
+        <a href="#participants">Participants</a>
+      </p>
+    </div>
+  </div>
+</footer>
+
+
     <script src="js/vendor/jquery.js"></script>
     <script src="js/foundation.min.js"></script>
     <script>
-      $(document).foundation();
+      $(document).foundation({
+        equalizer:{
+          equalize_on_stack:true
+        }
+      });
     </script>
   </body>
 </html>

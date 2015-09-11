@@ -1,0 +1,87 @@
+.footer {
+  background-color: #ccc;
+  text-align: center;
+  font-size: 1.2rem;
+  padding: 1rem; 
+}
+.footer h6{
+  font-weight: bold;
+  font-size: 1.2rem;
+  color:#313366;
+}
+
+.footer .footer-form textarea, .footer .footer-form input {
+  border-radius: 3px;
+  box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.1);
+  border: none;
+  resize: none;
+  font: inherit;
+  font-size: 0.875rem;
+  font-weight: normal;
+  padding: 1.3rem; 
+}
+
+.footer .footer-form label {
+  color: #313366;
+  font-size: 1.2rem;
+  margin: 0 0 1rem 0;
+  font-weight: bold; 
+}
+
+.footer .footer-form .submit {
+  padding: .5rem 3.5rem;
+  font-weight: bold;
+  float: right;
+  margin: 0 1rem 0 0; 
+}
+
+.footer .footer-links a {
+  list-style: none;
+  text-decoration: none;
+  font-weight: normal;
+  color: #818081;
+  padding: 0;
+  margin: 0;
+  font-size: 0.875rem; 
+}
+
+.footer .footer-links a:hover{
+  color: #fff;
+}
+
+.footer .footer-links a::after {
+  content: "•";
+  padding: 0 0.2rem 0 0.4rem; 
+}
+.footer .footer-links a:hover:after{
+  color: #818081;
+}
+.footer .footer-links a:last-child::after {
+  content: "";
+  padding: 0 0.4rem 0 0.8rem; 
+}
+
+@media only screen and (max-width: 40em) {
+  .footer .logo img{
+    width:50%;
+  }
+  .footer-links{
+    margin-top: 20px;
+  }
+ }
+
+@media only screen and (min-width: 40.063em) {
+  .footer {
+    padding: 2rem ; 
+  }
+
+  .footer p {
+    text-align: left; 
+  }
+
+  .footer .social {
+    text-align: left;
+    margin: 0; 
+  }
+       
+}
