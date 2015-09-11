@@ -1,200 +1,323 @@
-<!DOCTYPE html>
-<html>
-
+<!doctype html>
+<html class="no-js" lang="en">
   <head>
-    <meta charset='utf-8'>
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="FabMo™ : At last... Innovative Control for Today&#39;s and Tomorrow&#39;s Smart Tools">
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
-    <title>FabMo™</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <title>OpenSBP&reg;</title>
+    <link rel="stylesheet" href="css/global.css" />
+    <script src="js/vendor/modernizr.js"></script>
+    <script src="js/vendor/wufoo.js"></script>
   </head>
+  <body id="top">
+    
+ <!-- Navigation -->
+    <div class="contain-to-grid sticky">
 
-  <body>
+      <nav class="top-bar" data-topbar>
+        <ul class="title-area">
+          <li class="name">
+            <!-- <h1><a class="logo show-for-small-only" href="#"><img src="img/OpenSBP_logo.png" /></a></h1> -->
+            <h1>OpenSBP&reg;</h1>
+          </li>
+          <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+        </ul>
 
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-      <header class="inner">
-        <img class="header_logo" src="images/FabMo_G2_logo.png">
-        <a id="forkme_banner" href="https://github.com/FabMo">View on GitHub</a>
-      </header>
-    </div>
+        <section class="top-bar-section">
 
-    <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      <div id="wrapper">
-        <div id="head_container">
-          <div class="cartoon_container">
-            <img src="images/FabMo_Cartoon.png">
-          </div>
-          <div class="tagline_container">
-            <span class="tagline"><span class="first_tagline">At Last ... </span><br>
-              <span class="second_tagline">Innovative Controls for </span><br>
-              <span><strong>Digital Fabrication</strong></span>
-            </span>
-          </div>
-        </div>
-      </div>
-
-      <div id="main_content">
-        <div class="introduction_story inner">
-          <p>
-            FabMo is an open-source, digital fabrication and motion platform of software and hardware. Originated by the Handibot team at ShopBot Tools, FabMo has a powerful core motion system, G2, created by Synthetos. FabMo is available to be used and adapted by anyone, to run every digital smart tool imaginable, today and tomorrow. FabMo offers fabbers 3 essential freedoms.
-          </p>
-        </div>
-
-        <div class="freedom inner">
-          <div class="freedom_of_access">
-            <h3>Freedom of <span>Access</span></h3>
-            <h4><strong>Access your digital fabrication tool (whether subtractive CNC or additive 3D printer) from any device </strong></h4>
-            <p>
-              FabMo will link your network-enabled devices to your digital fab tool. Access a tool from your phone or via any computer. Control the tool or just
-              monitor the action. Do it wirelessly, or hardwire with ethernet or USB to achieve industrial robustness. Post job files from your cloud storage,
-              or only use locally generated files. You have the freedom.
-            </p>
-          </div>
-          <div class="freedom_to_create">
-            <h3>Freedom to <span>Create</span></h3>
-            <h4><strong>Generate toolpath files from a wide range of programs (CAD/CAM) or from digital-fabrication apps</strong></h4>
-            <p>
-              FabMo supports a wide range of digital-fab workflows from traditional CAD > CAM approaches to a variety of "app" types. Some apps will provide utility functions and carry out common jobs, others will produce complex digital-fab projects whose parameters can be customized by users. FabMo supports several
-              motion languages including OpenSBP and legacy g-code. Other languages may be added. Go FabMo to create, produce, and manufacture in ways that suit your style.
-            </p>
-          </div>
-          <div class="freedom_to_innovate">
-            <h3>Freedom to <span>Innovate</span></h3>
-            <h4><strong>Modify FabMo to fit your needs or the needs of your specialized fabrication tools</strong></h4>
-            <p>
-              We're encouraging the development of an open system that will evolve to meet the needs of the fabrication, motion, and robotics community and provide a platform for shared innovation. Several development-system hardware options are available for hardware designers, and the software is organized to be modular and understandable. At the lowest level,
-              advanced, fast, and smooth motion is provided by G2 - a real-time, motion system core running on a dedicated microcontroller. At higher levels, a FabMo SBC 
-              manages files, projects, and apps and links your tool to the world.
-            </p>
-          </div>
-        </div>
-
-        <div class="fabmo_story">
-          <h2>The <span>FabMo</span> Story</h2>
-          <h5>We have two challenges in digital fabrication today.</h5>
-          <p>
-            The first challenge is the CAD to CAM workflow for generating tool-path files. The difficulty of doing CAD and CAM creates a tough
-            hurdle, particulary for simple projects or routine work. The second challenge is that running the files that are generated from CAM output is made complicated by
-            proprietary or idiosyncratic tool languages and by tool interfaces having restrictive connectivity and little interoperability.
-          </p>
-          <p>
-            With the FabMo digital fabrication and motion platform, we introduce a new concept for performing digital fabrication that frees access to tools
-            and opens new paths of use. FabMo takes advantage of progress in microprocessors and microcontrollers, which now offer new, low-cost options for managing
-            and driving digital fabrication equipment, both subractive and additive. The FabMo "Engine" looks out from a digital fab tool allowing
-            access via a wide range of wired and wireless routes, and from almost any type of device, utilizing multiple and expandable motion languages. It efficiently feeds
-            the FabMo "Core" -- a low-level, real-time, high-performance motion system producing beautiful fabbing movement.
-          </p>
-          <p>
-            FabMo links a fabrication tool to apps and projects. Such apps will make created content for digital fabrication more available and customizable to
-            users' needs. FabMo links to environments for managing cloud apps, projects, and accounts.
-          </p>
-
-          <img src="images/FabMo_Dashboard.png">
-          <img src="images/Handibot_Com_1.jpg">
-          <img class="last_story_image" src="images/Handibot-Com_2.jpg">
-        </div>
-
-        <div class="product_info outer">
-          <div id="wrapper product">
-            <div class="hardware">
-              <h2>The Hardware</h2>
-              <h4>(Options for Users and Developers)</h4>
-              <p>
-                FabMo is based on two hardware components: 1) an SBC (single board computer) on which the "Engine" - interface, communications, and management systems - runs;
-                and 2) a 32bit ARM microprocessor the provides real-time environment for the "Core" motion functions.
-              </p>
-              <ul>
-                <li>
-                  The SBC runs a minimal linux install that supports the FabMo Engine. Raspberry Pi and BeagleBone Black SBC's are currently supported.
-                </li>
-                <li>
-                  The real-time microcontroller is loaded with the G2 motion system. Our reference implementation is on the Atmel SAM3X8E. This microcontroller is found on the Arduino
-                  Due, which makes the Due a useful development board. This real-time component of the system is also available in the form ShopBot's lastest (V300) Control Card.
-                  This Control Card modularly conncets to a wide range of ShopBot CNC interface boards that provide drivers, I/O buffering, and isolation. In addition,
-                  the real-time module is available as the "V9-TinyG2" board from Synthetos with 4 stepper-motor drivers. Either of these latter two systems will interface to a wide range of motors and hardware and can be used for creating a variety of DIY, digital fab tools and projects.
-                </li>
-              </ul>
-
-              <div class="hardware_images">
-                <div class="hardware_image_1">
-                  <img src="images/FabMo_Hardware_1.png">
-                  <p>BBB and Due: a Basic Development System</p>
-                </div>
-                <div class="hardware_image_2">
-                  <img src="images/FabMo_Hardware_2.png">
-                  <p>BBB and ShopBot Control Card and CNC Interface with Motor Drivers (shown on backside on right): a DIY CNC builder system</p>
-                </div>
-              </div>
-            </div>
-
-            <div class="divider"></div>
-
-            <div class="software">
-              <h2>The Software</h2>
-              <h4>(Concepts and Organization)</h4>
-              <p>
-                FabMo is a collection of software components and well-documented APIs. The FabMo Engine, running in linux on the tool's SBC, relates a digital fab tool
-                to the world; handles local user needs; manages the flow of jobs to the real-time core.
-              </p>
-              <p>
-                Programmed primarily in javascript with node.js, the FabMo Engine serves up a contemporary, mobile-friendly web interface. Several base modules provide
-                run-times for different digital-fab-tool path languages and serve as models for creating others.
-              </p>
-              <p>
-                More importantly, FabMo provides a framework for developing and hosting "apps" that will contribute a wide range of usability to digital fab tools.
-                An App Developer Kit provides instructions and a template for app development as well as several examples. Apps are written in the languages of the web (HTML,
-                Javascript, Coffeescript, CSS, etc) so that as tools for the web grow, so do our tools for doing digital fabrication!
-              </p>
-              <p>
-                The FabMo "G2 Core" resides on the ARM microcontroller. It represents work of the Synthetos team. G2 is a sophisticated motion system: high speed (high
-                step rates), advanced "S" shaped ramping for smooth and efficient accelerations and decelerations, while running in real time and not requiring fussing with PC timing functions or USB converters.
-              </p>
+          <div class="logo-wrapper hide-for-small-only">
+            <div class="logo">
+              <a href="#top"><img src="img/OpenSBP_logo.png"></a>
             </div>
           </div>
-        </div>
 
-      </div>
+          <!-- Right Nav Section -->
+          <ul class="right">
+            <li><a href="#resources">Resources</a></li>
+            <li><a href="#community">Community</a></li>
+            <li><a href="#participants">Participants</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+
+          <!-- Left Nav Section -->
+          <ul class="left">
+            <li><a href="#programming">Programming Extensions</a></li>
+            <li><a href="#license">License</a></li>
+            <li><a href="#language">Language</a></li>
+            <li><a href="#syntax">Syntax</a></li>
+          </ul>
+
+        </section>
+      </nav>
+
+    </div><!-- /navigation -->
+
+
+<header class="row">
+  <div class="medium-10 medium-centered columns">
+    <h1>OpenSBP<sup>&reg;</sup></h1>
+    <h3 class="subheader">An Easy and OPEN CNC Language for Digital Fabrication</h3>
+    <h5>OpenSBP<sup>&reg;</sup> is a syntax standard for the toolpath and instruction code used to control CNC machines and digital fabrication tools. As described here, it is in the public domain and freely available for use on any equipment. It may be generated and exported by any software for use on digital fabrication tools.</h5>
+  </div>
+</header>
+<div class="row" data-equalizer>
+  <div class="medium-6 columns " data-equalizer-watch>
+    <h3>The OpenSBP Group</h3>
+    <p>The <strong>OpenSBP Group</strong> is composed of CNC software companies, CNC tool  manufacturers, and users supporting the development of this open syntax standard for the toolpath and instruction code used to control CNC machines and digital fabrication tools. The group seeks to develop a standard syntax that is easy for human users to read, is readily implemented by different controllers, and offers more flexibility and extensibility than legacy G-code. <strong>OpenSBP</strong><sup>&reg;</sup> is freely available for use in any CNC or digital fabrication system and by any company. The current certification process is described on the Licensing page. All users are invited to participate in the <strong>OpenSBP Group</strong> community.</p>
+
+    <div class="panel secondary"><p>Note that <strong>OpenSBP</strong><sup>&reg;</sup> is not intended to be the high-level, 3D-model-integrated language that many of us envision as the long-term goal for a digital fabrication language. Rather, it is a simple, easy-to-use-and-implement system available to serve current needs and help standardize working with today's digital fabrication tools.</p></div>
+  </div>
+  <div class="medium-6 columns " data-equalizer-watch>
+    <h3>ShopBot Tools</h3>
+    <p>The core coding format for <strong>OpenSBP</strong><sup>&reg;</sup> was developed by ShopBot Tools, Inc for use on ShopBot CNC routers. It has become attractive to other developers because of its simple, straightforward, and human-readable approach to machine control. ShopBots read g-code as well as <strong>OpenSBP</strong> but believe that <strong>OpenSBP</strong> is the most useful and efficient format for anyone not dependent on g-code for legacy reasons.</p>
+
+    <p>ShopBot has contributed the syntax, along with full documentation and support resources, to the public domain and it is available on this site. ShopBot encourage the use of <strong>OpenSBP</strong><sup>&reg;</sup> in any CNC tool or digital fabrication product and will continue to work with the <strong>OpenSBP Group</strong> and community of users on its development. The <strong>OpenSBP Group</strong> plans  to develop an Advisory Board to establish general guidelines for using and expanding the <strong>OpenSBP</strong><sup>&reg;</sup> format and syntax, for managing certification, and for developing supporting documentation including helpful documentation for creating post-processors for <strong>OpenSBP</strong><sup>&reg;</sup>.</p>
+  </div>
+</div>
+
+<div class="row" >
+  <div class="medium-12 columns">
+    <ul class="small-block-grid-2 medium-block-grid-4 concepts" data-equalizer>
+      <li>
+        <div class="panel" data-equalizer-watch>
+          <h5>OpenSBP<sup>&reg;</sup> Syntax</h5>
+          <p>A simple, readable 2-letter command system for communicating toolpaths data.</p>
+          <a href="#syntax" class="button small">Learn more</a>
+        </div>
+      </li>
+      <li>
+        <div class="panel" data-equalizer-watch>
+          <h5>OpenSBP<sup>&reg;</sup> Language</h5>
+          <p>A full featured set of parameterized Commands
+      providing a wide range of capabilities and functionality for CNC, digital fabrication, and robotic tools.</p>
+          <a href="#language" class="button small">Learn more</a>
+        </div>
+      </li>
+      <li>
+         <div class="panel" data-equalizer-watch>
+          <h5>OpenSBP<sup>&reg;</sup> Programming Extensions</h5>
+          <p>BASIC-like extensions to the Command language giving programming flexibility.</p>
+          <a href="#programming" class="button small">Learn more</a>
+        </div>
+      </li>
+      <li>
+        <div class="panel" data-equalizer-watch>
+          <h5>OpenSBP<sup>&reg;</sup> License</h5>
+          <p>Open and public use of the <strong>OpenSBP</strong> language established and encouraged here and by the <strong>OpenSBP Group</strong>.</p>
+          <a href="#license" class="button small">Learn more</a>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <hr>
+</div>
+
+
+<!-- left column -->
+<div class="row">
+  <div class="medium-6 columns content-col">
+    <div id="syntax">
+      <h3>Open SBP<sup>&reg;</sup> Syntax</h3>
+      <ul>
+          <li>OpenSBP<sup>&reg;</sup> is a sequential list of text Commands representing instructions to a digital tool.</li>
+          <li>All Commands take the form of a two-letter mnemonics.</li>
+          <li>Commands may be followed by one or more ordered parameters separated by commas:
+            <div>
+              <h3 class="subheader"><code>XX, parameter, parameter, ... </code></h3>
+              <p>Code Example:<br>
+                <code>M3, 23.21, 10, -0.23443    <span>{a 3-axis move to X,Y,Z}</span><br>
+                  MZ,   -.88                 <span>{a Z-axis move}</span><br>
+                  'comment here              <span>{a Remark line}</span>
+                </code>
+              </p>
+            </div>
+          </li>
+          <li>Indents, white space, blank lines may be used freely.</li>
+          <li>M3 (or M5) for 3-axis (or 5-axis) vectors and CG for arcs and circles and circles are the primary workhorse commands for toolpath description.</li>
+          <li>Programming Instructions, using a BASIC-like syntax, are also available in <strong>OpenSBP</strong><sup>&reg;</sup>. See the full details of the Language.</li>
+          <li>Files are text format, saved with the  ".sbp"  extension.</li>
+      </ul>
     </div>
-
-    <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-      <footer>
-        <div class="resources">
-          <h3>Resources</h3>
-
-          <h5>Download the</h5>
-          <a href="http://gofabmo.org/FabMo%20Handout_May2015.pdf"> Go! Fabmo handout</a>
-          <br>
-          <h5>Download the </h5>
-          <a href="http://www.github.com/shopbottools/fabmo-example-app">App Programming Intro and Example</a>
-          <br>
-          <h5>Find discussions on the</h5>
-          <a href="http://www.handibot.com/forum">Handibot App Developer Forum (just getting started)</a>
-          <br>
-          <h5>Read about the philosophy behind the</h5>
-          <a href="http://handibot.com/open-source.php">Handibot Open Innovation Platform and FabMo.</a>
-        </div>
-
-        <div class="logo_footer">
-          <img src="images/FabMo_G2_logo.png">
-          <p>Published with <a href="https://pages.github.com">GitHub Pages</a></p>
-        </div>
-      </footer>
+    <hr>
+    <div id="programming">
+      <h3>Open SBP<sup>&reg;</sup> Programming Extensions</h3>
+      <p>Details of usage for each Command and its Parameters is fully described in the Command Reference document.</p>
+      <a href="files/ProgHand.pdf" class="button small secondary">Download Command Reference</a>
     </div>
+    <hr>
+    <div id="resources">
+      <h3>Open SBP<sup>&reg;</sup> Resources</h3>
+      <p>OpenSBP® Resources are provided to make working with and developing in OpenSBP® easier. The resources should be helpful in developing and testing post-processors for the language. Those developing post-processors may also find it useful to employ the current ShopBot Control Software with which they can study and test code in Preview Mode. ShopBot Control Software is available for <a href="http://www.shopbottools.com/mSupport/controlsoftware.htm" target="_blank">free download.</p>
+        <ul class="button-group">
+          <li><a href="files/S_sblogo.sbp" class="button small secondary">DOWNLOAD Example File - ShopBot Logo (simple)</a></li>
+          <li><a href="files/vt_probe.sbp" class="button small secondary">DOWNLOAD Example File - Digitizing Probe (programming instructions)</a></li>
+          <li><a href="files/QuickReference_bothpages.pdf" class="button small secondary">DOWNLOAD Language Quick Reference Sheets</a></li>
+          <li><a href="files/GCodetoOpenSBP.zip" class="button small secondary">DOWNLOAD G-Code to OpenSBP Converter</a></li>
+        </ul>
 
-    <script type="text/javascript">
-      var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-      document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-    </script>
-    <script type="text/javascript">
-      try {
-        var pageTracker = _gat._getTracker("UA-40600601-3");
-      pageTracker._trackPageview();
-      } catch(err) {}
-    </script>
+    </div>
+    <hr>
+    <div id="participants">
+      <h3>Open SBP<sup>&reg;</sup> Participant Info</h3>
+      <p>The <strong>OpenSBP Group</strong> is an open community of companies and individuals interested in CNC code. Companies participating in <strong>OpenSBP</strong> offer products that will generate (post) code in the OpenSBP format.</p>
+      <p>To become a particpant, please <a href="#contact">contact us.</a></p>
+      <table>
+        <thead>
+          <tr>
+            <th>Company</th>
+            <th>Products</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><a href="http://www.artcam.com/" target="_blank">ArtCAM/Delcam</a></td>
+            <td>Complete Artistic Design &amp; Manufacturing Solution - ArtCAM Express, ArtCAM Insignia &amp; ArtCAM Pro</td>
+          </tr>
+          <tr>
+            <td><a href="http://www.cabinetpartspro.com/" target="_blank">Cabinet Parts Pro</a></td>
+            <td>Cabinet Parts Pro Cabinet Design Software</td>
+          </tr>
+          <tr>
+            <td><a href="http://www.mastercam.com/en-us/" target="_blank">CNC Software, Inc.</a></td>
+            <td>Mastercam family of CAD/CAM products</td>
+          </tr>
+          <tr>
+            <td><a href="http://mecsoft.com/" target="_blank">MecSoft Corporation</a></td>
+            <td>VisualMILL, RhinoCAM, Alibre CAM, VisualTURN, VisualART, FreeMILL</td>
+          </tr>
+          <tr>
+            <td><a href="http://www.enroutesoftware.com/" target="_blank">SA International</a></td>
+            <td>Enroute, Flexi</td>
+          </tr>
+          <tr>
+            <td><a href="http://www.shopbottools.com/" target="_blank">ShopBot Tools, Inc.</a></td>
+            <td>ShopBot CNC Control Software</td>
+          </tr>
+          <tr>
+            <td><a href="https://www.vectorart3d.com/" target="_blank">VectorArt3D</a></td>
+            <td>3D Models and Collections for CNC, Custom Models</td>
+          </tr>
+          <tr>
+            <td><a href="http://www.vectric.com/" target="_blank">Vectric</a></td>
+            <td>PartWorks, Aspire, V-Carve Pro, Cut-3D, Cut-2D, Photo V-Carve</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+<!-- end of left column -->
 
+<!-- right column -->
+  <div class="medium-6 columns content-col">
+    <div id="language">
+      <h3>Open SBP<sup>&reg;</sup> Language</h3>
+      <p>Programming extensions to the <strong>OpenSBP</strong><sup>&reg;</sup> language are modeled after the syntanx of the BASIC language. A number of programming instructions have been implemented and the plan is to use BASIC-like syntax for further enhancements.</p>
+
+      <p><strong>OpenSBP</strong><sup>&reg;</sup> has also established procedures for interacting with system variables of the operative Control System and for moving data in and out of the Windows Registry.</p>
+
+      <p><strong>OpenSBP</strong><sup>&reg;</sup> Programming Extensions are fulling described in the Programming Handbook.</p>
+      <a href="files/ComRef.pdf" class="button small secondary">Download Programming Handbook</a>
+    </div>
+    <hr>
+    <div id="license">
+      <h3>Open SBP<sup>&reg;</sup> License</h3>
+      <p><strong>OpenSBP</strong><sup>&reg;</sup> is an open syntax standard for the toolpath and instruction code used to control CNC machines and digital fabrication tools. It is intended to be easy for human users to read and should be readily implemented by different controllers. It offers more flexibility and extensibility than legacy G-code. </p>
+
+      <p><strong>OpenSBP</strong><sup>&reg;</sup> is freely available for use in any CNC or digital fabrication system and companies and users are invited to participate in the <strong>OpenSBP</strong><sup>&reg;</sup> community. As interest develops, an open public forum will be established and an Advisory Board selected.</p>
+
+      <p>Currently, any member of the community may self-certify "<strong>OpenSBP</strong>" compliance and use the registered trademark [held, at the moment, by ShopBot]. The <strong>OpenSBP Group</strong> and its Advisory Board will attempt to keep certification a free and self-maintained option. However, the Advisory Board may eventually decide on a need for certification and modest fees to support a certification system.</p>
+
+      <p>The <strong>OpenSBP</strong><sup>&reg;</sup> standard has been developed with guidance of two helpful documents:</p>
+
+        <ul>
+          <li>Bruce Perens on "<a href="http://perens.com/OpenStandards/Definition.html" target="_blank">Open Standards: Principles and Practice</a>"</li>
+          <li>Ken Krechmer on "<a href="http://www.csrstds.com/openstds.html" target="_blank">The Meaning of Open Standards</a>"</li>
+        </ul>
+
+      <p>It is the intention of the <strong>OpenSBP Group</strong> and ShopBot Tools to observe the 6 principles of Perens and the 10 guidelines of Krechmer in developing <strong>OpenSBP</strong><sup>&reg;</sup> for the widest possible use. </p>
+    </div>
+    <hr>
+    <div id="community">
+      <h3>Open SBP<sup>&reg;</sup> Community</h3>
+      <p>The second meeting of the OpenSBP Group was held in conjunction with this year's AWFS Meeting in Las Vegas, CA July 15-18.</p>
+
+      <p>Blog and Forum coming soon&hellip;</p>
+    </div>
+  </div>
+<!-- end of right column -->  
+</div>   
+<footer class="footer">
+  <div class="row">
+    <div class="small-12 medium-5 medium-push-7 columns">
+      <p class="logo show-for-small-only"><img src="img/OpenSBP_logo.png"></p> 
+      <h6>Contact OpenSBP<sup>&reg;</sup></h6>
+      <p>For information, comments, expressions of interest or participation,<br />
+      please contact us. </p>
+      <a id="contact"></a>
+      <form id="form23" name="form23" class="wufoo topLabel page footer-form" accept-charset="UTF-8" autocomplete="off" enctype="multipart/form-data" method="post" novalidate
+      action="https://shopbottools.wufoo.com/forms/m3fpekb164thas/#public">
+        <div class="row">
+          <div class="medium-6 columns">
+            <label>
+              <input id="Field1" name="Field1" type="text" class="field text fn" value="" size="8" tabindex="1" placeholder="First Name"       required />
+            </label>
+          </div>
+          <div class="medium-6 columns">
+            <input id="Field2" name="Field2" type="text" class="field text ln" value="" size="14" tabindex="2" placeholder="Last Name" required />
+            <label>
+            </label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="medium-12 columns">
+            <label>
+              <input id="Field3" name="Field3" type="email" spellcheck="false" class="field text medium" value="" maxlength="255" tabindex="3" placeholder="Email Address"      required />
+            </label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="medium-12 columns">
+            <label>
+              <textarea id="Field4" name="Field4" class="field textarea small" spellcheck="true" rows="5" tabindex="4"
+ onkeyup="" placeholder="Message"    required  ></textarea>
+            </label>
+          </div>
+          <div class="row">
+            <div class="medium-9 medium-push-3 columns">
+              <input id="saveForm" name="saveForm" class="btTxt submit button radius small" type="submit" value="Send" />
+              <div style="display:none"><label for="comment">Do Not Fill This Out</label>
+<textarea name="comment" id="comment" rows="1" cols="1"></textarea>
+<input type="hidden" id="idstamp" name="idstamp" value="RMSukdY1eLHYRPN6QM+dHz52QqTKhCwnGStApv3kTCY=" /></div>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+    <div class="small-12 medium-5 medium-pull-7 columns">
+      <p class="logo hide-for-small-only"><img src="img/OpenSBP_logo.png"></p> 
+      <p class="footer-links">
+        <a href="#syntax">Syntax</a>
+        <a href="#language">Language</a>
+        <a href="#programming">Programming Extensions</a>
+        <a href="#license">License</a>
+        <a href="#resources">Resources</a>
+        <a href="#community">Community</a>
+        <a href="#participants">Participants</a>
+      </p>
+    </div>
+  </div>
+</footer>
+
+
+    <script src="js/vendor/jquery.js"></script>
+    <script src="js/foundation.min.js"></script>
+    <script>
+      $(document).foundation({
+        equalizer:{
+          equalize_on_stack:true
+        }
+      });
+    </script>
   </body>
 </html>
